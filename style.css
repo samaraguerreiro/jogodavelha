@@ -1,119 +1,60 @@
-body{
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 153, 1) 0%,
-        rgba(0, 153, 153, 50) 100%
-      );
-}
-.scoreboard{
-    /* background-color: rgb(175, 175, 175); */
-    display: inline-block;
-    width: 100%;
-}
-.wins,.loss,.draw, span{
-    display: inline-flex;
-    color: rgb(230, 230, 230);
-    font-size: 20px;
-    width: 15%;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-}
-.loss{
-    color: rgb(126, 3, 3);
-}
-.wins{
-    color: rgb(42, 94, 29); 
-}
-#jogo{
-    
-    display: grid;
-    width: 100%;
-    height: 98%;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(3);
-}
- 
-.linha{
-    height:200px;
-    border-color:aliceblue;
-}
-
-#casa1, #casa4, #casa7{
-    border-right: solid 0px;
-    border-color:aliceblue;
-}
-
-#casa2, #casa5, #casa8{
-    border-left: solid 5px;
-    border-right: solid 5px;
-    border-color:aliceblue;
-}
-
-#casa3, #casa6, #casa9{
-    border-left: solid 0px;
-    border-color:aliceblue;
-}
-
-#casa4, #casa5, #casa6{
-    border-top: solid 5px;
-    border-bottom: solid 5px;
-    border-color:aliceblue;
-}
- 
-.casa{
-    
-    border-left: solid 0px;
+body {
+    font-family: 'Arial', sans-serif;
     display: flex;
-    font-size: 100px;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    width:200px;
-    height:100%;
-    border-right:solid 0px;
-    float:left;
-    border-color:aliceblue;
-    cursor:pointer;
+    height: 100vh;
+    background-color: #FBE1F7;
 }
-#resultado{
-    font-size: 50px;
-    margin-top: 15px;
+
+#jogo {
+    text-align: center;
+    background-color: #FFF0F6;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+}
+
+.casa {
+    width: 100px;
+    height: 100px;
+    background-color: #FEE1F2;
+    border: 2px solid #F09BB7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #F09BB7;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#resultado {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.scoreboard {
+    margin: 10px 0;
 }
 
 button {
-    background-color: rgb(54, 54, 54); /* preto */
-    border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #F09BB7;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor:pointer;
-    margin-top: 5px;
-    margin-bottom: 55px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover{
-    background-color: #4CAF50; /* Green */
-    color: white;
-}
-.author{
-    font-family:'Courier New', Courier, monospace;
-    font-size: 12px;
-    color: white;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    text-align: center;
-}
-.author::before{
-    display: inline-block;
-    content:"by Jonas Martinez"
+button:hover {
+    background-color: #FCE4EC;
 }
